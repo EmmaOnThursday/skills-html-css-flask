@@ -14,22 +14,24 @@ def index_page():
 def application_form():
     """Show application form."""
 
+    print "Application form successful"
     return render_template("application-form.html")
-     
+    
 
 
-@app.route("/application-response")
+@app.route("/application-response", methods=['POST'])
 def application_response():
     """Show summary of responses from application-form."""
 
-    form = request.form
-    print "#######################", form
-    print type(form)
+    app_form = request.form
+    print "#######################", app_form
+    print type(app_form)
 
-    firstname = request.form.get("first-name", "Robin")
-    lastname = request.form.get("last-name", "Smith")
-    salary = request.form.get("salary", "65000")
-    position = request.form.get("position", "Product Manager")
+    firstname = request.form.get("first-name", "failure").title()
+    lastname = request.form.get("last-name", "failure").title()
+    salary = "%.2f" % float(request.form.get("salary", 0))
+    # salary = float((request.form.get("salary", 0)))
+    position = request.form.get("position", "failure").title()
 
     return render_template("application-response.html",   
                             firstname = firstname,
