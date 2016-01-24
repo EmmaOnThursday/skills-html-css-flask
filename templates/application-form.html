@@ -1,11 +1,7 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Skills-HTML-CSS</title>
-        <link rel="stylesheet" type="text/css" href="static/styles.css">
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block title %}Application Form{% endblock %}
+
+{% block body %}
         <div class="header-bar">Ubermelon</div>
         <h3>Thanks for your interest in joining Ubermelon!</h3>
         <div class="instructions">
@@ -32,5 +28,4 @@
             <br>
             <label><input type="submit" class="submit-button" value="Submit"></label>
         </form>
-    </body>
-</html>
+{% endblock %}

@@ -3,6 +3,10 @@ body{
     font-family: sans-serif;
 }
 
+h5 {
+    font-size: 16px;
+}
+
 .instructions{
     border:2px solid #006600;
     padding: .5em;

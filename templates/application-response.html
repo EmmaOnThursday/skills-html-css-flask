@@ -1,14 +1,12 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Application Response</title>
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
-</head>
-<body>
-    <!-- Is this thing on? -->
-    Thanks for your application, {{ firstname }} {{lastname}}. Your application 
-    for the position of {{position}} has been received, and your required salary
-    has been recorded as ${{salary}}.
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Application Response{% endblock %}
+
+{% block body %}
+
+    <div class="instructions">    
+    <p><h5>Thanks for your application, {{ firstname }} {{lastname}}! </h5>
+        Your application for the position of {{position}} has been received,
+        and your required salary has been recorded as ${{salary}}.<p>
+    </div>
+
+{% endblock %}
