@@ -9,12 +9,21 @@ def index_page():
 
     return "<html><body>This is the homepage.</body></html>"
 
-@app.route("/application-form", methods=['GET', 'POST'])
+
+@app.route("/application-form")
 def application_form():
     """Show application form."""
 
+    return render_template("application-form.html")
+     
+
+
+@app.route("/application-response")
+def application_response():
+    """Show summary of responses from application-form."""
+
     form = request.form
-    print form
+    print "#######################", form
     print type(form)
 
     firstname = request.form.get("first-name", "Robin")
@@ -22,18 +31,12 @@ def application_form():
     salary = request.form.get("salary", "65000")
     position = request.form.get("position", "Product Manager")
 
-    return render_template("application-form.html",
+    return render_template("application-response.html",   
                             firstname = firstname,
                             lastname = lastname,
                             salary = salary,
                             position = position)
 
-@app.route("/application-response")
-def application_response():
-    """Show summary of responses from application-form."""
-
-    # return render_template("application-response.html")
-    return render_template("application-response.html")
 
                             
     
