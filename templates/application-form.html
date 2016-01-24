@@ -1,12 +1,36 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Skills-Web</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
-    <!-- This page needs a form that can capture data about the user's
-    first name, last name, job title, and salary requirements. -->
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Skills-HTML-CSS</title>
+        <link rel="stylesheet" type="text/css" href="static/styles.css">
+    </head>
+    <body>
+        <div class="header-bar">Ubermelon</div>
+        <h3>Thanks for your interest in joining Ubermelon!</h3>
+        <div class="instructions">
+            <p>
+                Please fill out the fields below, and a recruiter will contact you shortly.
+            </p>
+        </div>
+        <br>
+            <form action='/application-response' method=['get', 'post]'>
+            <label>First Name: <input type="text" name="first-name" placeholder="Robin" class="input-field"></input></label>
+            <label>Last Name: <input type="text" name="last-name" placeholder="Smith" class="input-field last-name"></input></label>
+            <br>
+            <br>
+            <label>Salary Requirement: $<input type="number" name="salary" min="0" step="5000" placeholder="65000" class="input-field"></input></label>
+            <br>
+            <br>
+            What job are you interested in?
+            <select name="position">
+                <label><option value="product-manager">Product Manager</option></label>
+                <label><option value="software-engineer">Software Engineer</option></label>
+                <label><option value="qa-engineer">QA Engineer</option></label>
+            </select>
+            <br>
+            <br>
+            <label><input type="submit" class="submit-button" value="Submit"></input></label>
+        </form>
+    </body>
 </html>

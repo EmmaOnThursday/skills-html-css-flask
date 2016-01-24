@@ -1,1 +1,38 @@
-/*Your styles can go here.*/
+
+body{
+    font-family: sans-serif;
+}
+
+.instructions{
+    border:2px solid #006600;
+    padding: .5em;
+    margin: 0;
+}
+
+.header-bar {
+    background-color: #006600;
+    color:#ff3333;
+    font-size: 24;
+    height: 1em;
+    padding:1em;
+    font-weight: bolder;
+    font-family: sans-serif;
+    margin: -8px;
+}
+
+.last-name{
+    font-weight: bold;
+}
+
+/*Separated out fields and submit button into classes, instead of using the 
+more general "input" as selector, because submit button has differently-styled 
+borders, and should be its own color for easy parsing.*/ 
+
+.input-field{
+    background-color:  #ffffe5;
+    border:1px solid #ffd480;
+}
+
+.submit-button{
+    background-color: #ffc080;
+}
